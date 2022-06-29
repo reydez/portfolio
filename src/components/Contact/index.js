@@ -10,9 +10,13 @@ const Contact = () => {
   const refForm = useRef()
 
   useEffect(() => {
-    setTimeout(() => {
-      return setLetterClass('text-animate-hover')
+    const timer = setTimeout(() => {
+      setLetterClass('text-animate-hover')
     }, 3000)
+
+    return () => {
+      clearTimeout(timer)
+    }
   }, [])
 
   const sendMail = (e) => {

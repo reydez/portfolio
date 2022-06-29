@@ -96,6 +96,12 @@
             }
         }
 
+        a.portfolio-link {
+            &:after {
+                content: 'PORFOLIO';
+            }
+        }
+
         a.contact-link {
             &:after {
                 content: 'CONTACT';

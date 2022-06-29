@@ -50,9 +50,13 @@ const Home = () => {
   ]
 
   useEffect(() => {
-    setTimeout(() => {
-      return setLetterClass('text-animate-hover')
+    const timer = setTimeout(() => {
+      setLetterClass('text-animate-hover')
     }, 4000)
+
+    return () => {
+      clearTimeout(timer)
+    }
   }, [])
 
   return (
